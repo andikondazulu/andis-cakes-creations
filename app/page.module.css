@@ -537,6 +537,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
+  min-width: 0;
 }
 .order { background: var(--color-white); }
 .enquire { background: var(--color-white); }
@@ -548,7 +549,7 @@
   }
 }
 
-.formIntro { max-width: 42ch; }
+.formIntro { max-width: 42ch; min-width: 0; }
 .formLead {
   font-size: 1rem;
   line-height: 1.6;
@@ -564,12 +565,14 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  min-width: 0;
 }
 
 .formRow {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.2rem;
+  min-width: 0;
 }
 @media (min-width: 560px) {
   .formRow { grid-template-columns: 1fr 1fr; }
@@ -582,6 +585,7 @@
   font-weight: 700;
   font-size: 0.85rem;
   color: #000000;
+  min-width: 0;
 }
 
 .formFull { grid-column: 1 / -1; }
@@ -589,6 +593,10 @@
 .formCard input,
 .formCard select,
 .formCard textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   font-weight: 500;
   padding: 0.75rem 0.9rem;
   border-radius: 10px;
